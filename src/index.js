@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Garage from './Garage'
+import App from './App'
 
-ReactDOM.render(<Garage />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
