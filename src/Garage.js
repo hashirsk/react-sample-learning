@@ -1,5 +1,6 @@
 import React from 'react'
 import Car from './Car'
+import MyForm from './MyForm'
 
 class Garage extends React.Component {
     constructor(){
@@ -22,6 +23,7 @@ class Garage extends React.Component {
         }
         return (
             <div>
+                <MyForm />
                 <h1>Who lives in my garage?</h1>
                 {car}
                 <button type="button"

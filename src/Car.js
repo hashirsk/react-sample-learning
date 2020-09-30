@@ -39,9 +39,9 @@ class Car extends React.Component {
 
     //call after render method one time
     componentDidMount = ()=> {
-        setTimeout(() => {
-          alert('Car Component Rendered')
-        }, 1000)
+        // setTimeout(() => {
+        //   alert('Car Component Rendered')
+        // }, 1000)
       }
 
       //tells to continue referesh component
@@ -65,7 +65,7 @@ class Car extends React.Component {
 
       //call after method componentDidUpdate
       componentWillUnmount = () => {
-        alert('Car Component going to remove')
+       // alert('Car Component going to remove')
       }
 }
 
