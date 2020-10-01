@@ -1,0 +1,78 @@
+@import "_global.scss";
+
+   body {
+    font-family: $defaultFont;
+   }
+
+   a {
+     text-decoration: none;
+     color:white;
+     font-size: large;
+     margin-left: 12px;
+   }
+
+   a:visited { text-decoration: none; color:transparent; }
+   a:focus, a:hover, a:active { text-decoration: none; color:black }
+
+   .mainContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+   }
+
+   @mixin button-background-style-active {
+    border: $buttonBorderActive;
+    background-color: $buttonBackgroundColorActive;
+    color:black
+   }
+
+   @mixin button-background-style {
+    border: $buttonBorder;
+    color: white;
+    background-color: $buttonBackgroundColor;
+   }
+
+   @mixin button-prop {
+    border-radius: $buttonRadius;
+    padding: $buttonPadding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
+   }
+
+   .fbMessengerBtn {
+     @include button-background-style;
+     @include button-prop;
+   }
+
+   .fbMessengerBtn:focus, .fbMessengerBtn:hover, .fbMessengerBtn:active{
+    @include button-background-style-active;
+    @include button-prop;
+   }
+
+   .telegrameBtn{
+    @include button-background-style;
+    @include button-prop;
+     margin-left: 20px;
+   }
+
+   .telegrameBtn:focus, .telegrameBtn:hover, .telegrameBtn:active{
+    @include button-background-style-active;
+    @include button-prop;
+   }
+
+   .getTouchWithUs {
+       color: rgb(106, 106, 197);
+       font-size: 36px;
+       text-decoration: overline underline;
+       text-decoration-style: dotted;
+   }
+
+   .contactContainer{
+       text-align: center;
+       position: absolute;
+       width:100%;
+       bottom: 0px;
+       padding: 10px;
+   }

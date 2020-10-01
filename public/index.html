@@ -8,30 +8,6 @@
    
   </head>
   <body>
-    <div id="car"></div>
-    <div id="div1"></div>
-    <div id="div2"></div>
     <div id="root"></div>
-    
-    <script>
-      class Car {
-        constructor(name){
-          this.brand = name
-        }
-        
-        present = ()=> "I don't have a "+this.brand +" Car. I would like to purchase "+this.brand
-      }
-
-      class Model extends Car{
-        constructor(name, mod) {
-          super(name)
-          this.model = mod
-        }
-        
-        show = yes => this.present() + ' '+this.model+ ' '+yes
-      }
-
-      document.getElementById("car").innerHTML = "<h2>"+new Model("Ford", "Ecosport").show("test")+"</h2>";
-    </script>
   </body>
 </html>
