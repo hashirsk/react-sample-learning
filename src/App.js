@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
-import Data from './Data';
+import Data from './EnhancedTable';
 import { Facebook, Telegram } from '@material-ui/icons';
-import { Fab, Container, makeStyles, Box, Typography } from '@material-ui/core';
+import { Fab, Container, makeStyles, Box, Typography, Paper } from '@material-ui/core';
 //https://material-ui.com/components/material-icons/
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10px",
     bottom: "0px",
     width: "100%",
-    textAlign: "center"
+    marginLeft: "0px",
+    textAlign: "center",
+    backgroundColor: "#F0F0F0"
   }
 }))
 
@@ -21,13 +23,13 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <Box >
       <Data />
-      <Box className={classes.bottomContainer}>
-      <Typography variant="h6" display="block" gutterBottom>
+      <Paper display="block" className={classes.bottomContainer}>
+      <Typography variant="h6" display="inline" gutterBottom>
       Get in touch with us - 
       </Typography>
-      <Box >
+      <Box display="block">
       <Fab 
       style={{margin: "10px 0px 20px 0px"}}
         variant="extended" 
@@ -59,9 +61,9 @@ function App() {
         target="_blank"
         color="primary"> <Telegram /> Open Telegram</Button> */}
         </Box>
-        </Box>
+        </Paper>
 
-    </div>
+    </Box>
   );
 }
 
